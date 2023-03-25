@@ -1,30 +1,20 @@
 // Import the required modules
 import "./App.css";
-import { useState } from "react";
-import { Button, Grid, Spacer, Text, Loading } from "@nextui-org/react";
-
+import { Button, Card, Grid, Spacer, Text } from "@nextui-org/react";
 function App() {
-  // Create a state variable to track the loading status of the button
-  const [loadingButton, setLoadingButton] = useState(false);
-
-  // Define a function to execute when the button is pressed
-  const newSite = () => {
-    // Update the loading status of the button
-    setLoadingButton(true);
-
-    // Simulate a delay of 5 seconds before navigating to a new page
-    setTimeout(() => {
-      // TODO: Uncomment the following lines once the Thesaurus component is ready
-      // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-      // import Thesaurus from "./pages/Thesaurus";
-      // <Router>
-      //   <Routes>
-      //     <Route exact path="/pages/Thesaurus" element={<Thesaurus />} />
-      //   </Routes>
-      // </Router>;
-    }, 5000);
+   const Testimonial = () => {
+    return (
+      <div>
+        <p>
+          "I have been using LarryTheFatCat's Thesaurus app for the past few
+          months, and it has been a game-changer for my communication. As a
+          writer, I often struggle to find the right words to convey my thoughts
+          effectively, but with this app, I can quickly and easily find synonyms
+          and antonyms to enhance my writing." - ChatGPT
+        </p>
+      </div>
+    );
   };
-
   // Render the UI
   return (
     <div className="container">
@@ -46,23 +36,19 @@ function App() {
             discover a world of words together!
           </Text>
         </Grid>
-
         <Grid.Container gap={4} justify="center">
           <Grid>
-            {/* Display a button to start using the app */}
-            {loadingButton ? (
-              // If the button is currently loading, display a loading indicator
-              <Button color="gradient">
-                <Loading color="currentColor" type="points" />
-              </Button>
-            ) : (
-              // If the button is not loading, display the regular button
-              <Button onPress={newSite} color="gradient">
-                Get Started Now
-              </Button>
-            )}
+            <Button color="gradient">Get Started Now</Button>
           </Grid>
         </Grid.Container>
+      </Grid.Container>
+      <Spacer y={2} />
+      <Grid.Container>
+        <Card css={{ mw: "500px" }} variant="bordered">
+          <Card.Body>
+            <Testimonial />
+          </Card.Body>
+        </Card>
       </Grid.Container>
     </div>
   );
