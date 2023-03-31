@@ -1,8 +1,17 @@
 // Import the required modules
 import "./App.css";
 import { Button, Card, Grid, Spacer, Text } from "@nextui-org/react";
-function App() {
-   const Testimonial = () => {
+import { Illustration } from "../components/CommunicationSVG";
+// use arrow function
+// they look cool so I just started using them
+// why do they look cool? idk
+const App = () => {
+  // I might reuse this testimonial somewhere else
+  // but for now it just keeps the actual HTMX code
+  // simplistic and I can just import it as a component
+  // instead of pasting a giant blob of text
+  // somewhere into the code making it look ugly
+  const Testimonial = () => {
     return (
       <div>
         <p>
@@ -44,15 +53,20 @@ function App() {
       </Grid.Container>
       <Spacer y={2} />
       <Grid.Container>
-        <Card css={{ mw: "500px" }} variant="bordered">
+        <Card isHoverable css={{ mw: "500px" }} variant="bordered">
           <Card.Body>
             <Testimonial />
           </Card.Body>
         </Card>
       </Grid.Container>
+      <Grid.Container justify="right">
+        <Grid>
+          <Illustration />
+        </Grid>
+      </Grid.Container>
     </div>
   );
-}
+};
 
 // Export the App component as the default export of this module
 export default App;

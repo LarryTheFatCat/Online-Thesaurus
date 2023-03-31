@@ -1,11 +1,12 @@
+import { Text } from '@nextui-org/react';
 import React from 'react'
 
-function Thesaurus() {
+export const Thesaurus = () => {
     return(
-        <div>
-            e
+        <div className="container">
+            <Text>
+                hi
+            </Text>
         </div>
     )
 }
-
-export default Thesaurus;
