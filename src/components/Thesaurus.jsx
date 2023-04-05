@@ -1,26 +1,21 @@
 import { Text } from "@nextui-org/react";
-import { useNavigate } from "react-router-dom";
-const App = () => {
-  const navigate = useNavigate();
+import { Routes, Route } from "react-router-dom";
+const Thesaurus = () => {
   const Navigation = () => {
     return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/thesaurus" element={<Thesaurus />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route exact path="/thesaurus/" element={<Thesaurus />} />
+      </Routes>
     );
   };
   return (
     <div>
       <div className="container">
-        <Text>hi</Text>
-        <button onClick={() => navigate("/")}>Go back to home page</button>
+        <Text color="white">hi</Text>
         <Navigation />
       </div>
     </div>
   );
 };
 
-export default App;
+export default Thesaurus;

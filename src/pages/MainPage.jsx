@@ -1,8 +1,6 @@
 import "./App.css";
 import { Button, Card, Grid, Spacer, Text, Link } from "@nextui-org/react";
 import { Illustration } from "../components/CommunicationSVG";
-import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from "react-router-dom";
-import Thesaurus from "../components/Thesaurus";
 
 const App = () => {
   const Testimonial = () => {
@@ -20,57 +18,43 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <div className="container">
-        <Text color="white" size={50} b>
-          Welcome To Our Thesaurus App!
-        </Text>
+    <div className="container">
+      <Text color="white" size={50} b>
+        Welcome To Our Thesaurus App!
+      </Text>
 
-        <Spacer y={1} />
+      <Spacer y={1} />
 
-        <Grid.Container gap={2} justify="center">
+      <Grid.Container gap={2} justify="center">
+        <Grid>
+          <Text color="#C1C2C5" css={{ maxWidth: "600px", fontSize: "15px" }}>
+            Get ready to expand your vocabulary and elevate your writing with
+            our comprehensive database of synonyms, antonyms, and related words.
+            Whether you're a student, writer, or just looking to improve your
+            communication skills, our app is here to help. Let's dive in and
+            discover a world of words together!
+          </Text>
+        </Grid>
+        <Grid.Container gap={4} justify="center">
           <Grid>
-            <Text color="#C1C2C5" css={{ maxWidth: "600px", fontSize: "15px" }}>
-              Get ready to expand your vocabulary and elevate your writing with
-              our comprehensive database of synonyms, antonyms, and related words.
-              Whether you're a student, writer, or just looking to improve your
-              communication skills, our app is here to help. Let's dive in and
-              discover a world of words together!
-            </Text>
-          </Grid>
-          <Grid.Container gap={4} justify="center">
-            <Grid>
-              <Link href="/thesaurus" passHref>
-                <Button color="gradient">Get Started Now</Button>
-              </Link>
-            </Grid>
-          </Grid.Container>
-        </Grid.Container>
-        <Spacer y={2} />
-        <Grid.Container>
-          <Card isHoverable css={{ mw: "500px" }} variant="bordered">
-            <Card.Body>
-              <Testimonial />
-            </Card.Body>
-          </Card>
-        </Grid.Container>
-        <Grid.Container justify="right">
-          <Grid>
-            <Illustration />
+            <Button color="gradient">Get Started Now</Button>
           </Grid>
         </Grid.Container>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/thesaurus" element={<Thesaurus />} />
-        </Routes>
-      </div>
-    </Router>
+      </Grid.Container>
+      <Spacer y={2} />
+      <Grid.Container>
+        <Card isHoverable css={{ mw: "500px" }} variant="bordered">
+          <Card.Body>
+            <Testimonial />
+          </Card.Body>
+        </Card>
+      </Grid.Container>
+      <Grid.Container justify="right">
+        <Grid>
+          <Illustration />
+        </Grid>
+      </Grid.Container>
+    </div>
   );
 };
-
-const Home = () => {
-  return <></>;
-};
-
 export default App;
