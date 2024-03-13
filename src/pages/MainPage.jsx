@@ -1,21 +1,10 @@
 import "./App.css";
-import { Button, Card, Grid, Spacer, Text, Link } from "@nextui-org/react";
+import { Button, Card, Grid, Spacer, Text, User } from "@nextui-org/react";
 import { Illustration } from "../components/CommunicationSVG";
-
+import { Testimonial } from "../components/Testimonial";
+import { useRef } from "react";
 const App = () => {
-  const Testimonial = () => {
-    return (
-      <div>
-        <p>
-          "I have been using LarryTheFatCat's Thesaurus app for the past few
-          months, and it has been a game-changer for my communication. As a
-          writer, I often struggle to find the right words to convey my thoughts
-          effectively, but with this app, I can quickly and easily find synonyms
-          and antonyms to enhance my writing." - ChatGPT
-        </p>
-      </div>
-    );
-  };
+  const paragraphRef = useRef(null);
 
   return (
     <div className="container">
@@ -37,7 +26,17 @@ const App = () => {
         </Grid>
         <Grid.Container gap={4} justify="center">
           <Grid>
-            <Button color="gradient">Get Started Now</Button>
+            <Button
+              onClick={() =>
+                paragraphRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                })
+              }
+              color="gradient"
+            >
+              Get Started Now
+            </Button>
           </Grid>
         </Grid.Container>
       </Grid.Container>
@@ -50,8 +49,13 @@ const App = () => {
         </Card>
       </Grid.Container>
       <Grid.Container justify="right">
-        <Grid>
+        <Grid l>
           <Illustration />
+        </Grid>
+      </Grid.Container>
+      <Grid.Container>
+        <Grid>
+          <div ref={paragraphRef}>hello</div>
         </Grid>
       </Grid.Container>
     </div>
