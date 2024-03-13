@@ -67,6 +67,7 @@ const App = () => {
         </Card>
         <Illustration />
       </Container>
+      <div ref={paragraphRef}></div>
     </div>
   );
 };
