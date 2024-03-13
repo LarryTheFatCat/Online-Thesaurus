@@ -17,7 +17,7 @@
     "framer-motion": "^10.9.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
-    "next": "^13.2.4",
+    "next": "^13.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
