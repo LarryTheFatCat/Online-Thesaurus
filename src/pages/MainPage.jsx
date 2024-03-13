@@ -1,10 +1,20 @@
 import "./App.css";
-import { Button, Card, Grid, Spacer, Text, User } from "@nextui-org/react";
+import {
+  Button,
+  Card,
+  Grid,
+  Spacer,
+  Text,
+  Input,
+  Row,
+  Container,
+} from "@nextui-org/react";
 import { Illustration } from "../components/CommunicationSVG";
-import { Testimonial } from "../components/Testimonial";
-import { useRef } from "react";
+import { Testimonial, Testimonial_Two } from "../components/Testimonial";
+import { useRef, useState } from "react";
 const App = () => {
   const paragraphRef = useRef(null);
+  const [word, setWord] = useState(""); // Allows us to update word
 
   return (
     <div className="container">
@@ -41,21 +51,36 @@ const App = () => {
         </Grid.Container>
       </Grid.Container>
       <Spacer y={2} />
-      <Grid.Container>
-        <Card isHoverable css={{ mw: "500px" }} variant="bordered">
+      <Container fluid css={{ d: "flex" }}>
+        <Card isHoverable css={{ mw: "500px", h: "250px" }} variant="bordered">
           <Card.Body>
             <Testimonial />
           </Card.Body>
         </Card>
-      </Grid.Container>
-      <Grid.Container justify="right">
-        <Grid l>
-          <Illustration />
-        </Grid>
-      </Grid.Container>
+        <Spacer x={10} />
+        <Card isHoverable css={{ mw: "500px" }} variant="bordered">
+          <Card.Body>
+            <Row justify="right" align="right">
+              <Testimonial_Two />
+            </Row>
+          </Card.Body>
+        </Card>
+        <Illustration />
+      </Container>
       <Grid.Container>
         <Grid>
-          <div ref={paragraphRef}>hello</div>
+          <div ref={paragraphRef}>
+            <Text color="white" h2>
+              Words That Sound Like What Your Input:
+            </Text>
+            <Input
+              onChange={(e) => setWord(e.target.value)}
+              variant="Faded"
+              placeholder="Enter Word"
+              label="Word"
+              clearable
+            />
+          </div>
         </Grid>
       </Grid.Container>
     </div>
