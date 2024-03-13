@@ -51,7 +51,7 @@ const App = () => {
         </Grid.Container>
       </Grid.Container>
       <Spacer y={2} />
-      <Container fluid css={{ d: "flex" }}>
+      <Container css={{ d: "flex" }}>
         <Card isHoverable css={{ mw: "500px", h: "250px" }} variant="bordered">
           <Card.Body>
             <Testimonial />
@@ -67,22 +67,6 @@ const App = () => {
         </Card>
         <Illustration />
       </Container>
-      <Grid.Container>
-        <Grid>
-          <div ref={paragraphRef}>
-            <Text color="white" h2>
-              Words That Sound Like What Your Input:
-            </Text>
-            <Input
-              onChange={(e) => setWord(e.target.value)}
-              variant="Faded"
-              placeholder="Enter Word"
-              label="Word"
-              clearable
-            />
-          </div>
-        </Grid>
-      </Grid.Container>
     </div>
   );
 };
