@@ -11,18 +11,15 @@ import {
 import { Illustration } from "../components/CommunicationSVG";
 import { Testimonial, Testimonial_Two } from "../components/Testimonial";
 import { useRef } from "react";
-import { Navigation } from "../components/Navigation";
+// import { Navigation } from "../components/Navigation";
 const App = () => {
   const expandVocab = useRef(null);
   return (
     <div className="container">
-      <Navigation />
       <Text color="white" size={50} b>
         Welcome To Our Thesaurus App!
       </Text>
-
       <Spacer y={1} />
-
       <Grid.Container gap={2} justify="center">
         <Grid>
           <Text color="#C1C2C5" css={{ maxWidth: "600px", fontSize: "15px" }}>
