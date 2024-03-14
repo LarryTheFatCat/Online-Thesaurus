@@ -9,9 +9,10 @@ import {
   Container,
 } from "@nextui-org/react";
 import { Illustration } from "../components/CommunicationSVG";
+import { ThesaurusSVG } from "../components/ThesaurusSVG";
 import { Testimonial, Testimonial_Two } from "../components/Testimonial";
 import { useRef } from "react";
-// import { Navigation } from "../components/Navigation";
+
 const App = () => {
   const expandVocab = useRef(null);
   return (
@@ -62,6 +63,7 @@ const App = () => {
           </Card.Body>
         </Card>
         <Illustration />
+        <ThesaurusSVG />
       </Container>
       <Container color="white" align="left">
         <div ref={expandVocab}>
