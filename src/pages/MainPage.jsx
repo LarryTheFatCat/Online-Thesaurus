@@ -5,19 +5,18 @@ import {
   Grid,
   Spacer,
   Text,
-  Input,
   Row,
   Container,
 } from "@nextui-org/react";
 import { Illustration } from "../components/CommunicationSVG";
 import { Testimonial, Testimonial_Two } from "../components/Testimonial";
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import { Navigation } from "../components/Navigation";
 const App = () => {
-  const paragraphRef = useRef(null);
-  const [word, setWord] = useState(""); // Allows us to update word
-
+  const expandVocab = useRef(null);
   return (
     <div className="container">
+      <Navigation />
       <Text color="white" size={50} b>
         Welcome To Our Thesaurus App!
       </Text>
@@ -38,7 +37,7 @@ const App = () => {
           <Grid>
             <Button
               onClick={() =>
-                paragraphRef.current.scrollIntoView({
+                expandVocab.current.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                 })
@@ -67,7 +66,25 @@ const App = () => {
         </Card>
         <Illustration />
       </Container>
-      <div ref={paragraphRef}></div>
+      <Container color="white" align="left">
+        <div ref={expandVocab}>
+          <Text h2 color="white">
+            Expand Your Knowledge and Vocabulary!
+          </Text>
+          <br />
+          <Text align="center" color="gray" css={{ mw: "500px" }}>
+            Utilize this platform to streamline and enhance your lexicon! Here,
+            you can actively cultivate and broaden your vocabulary repertoire.
+            Through the array of tools and resources available, you can engage
+            in systematic vocabulary building and refinement. Whether you're a
+            student aiming to ace exams, a professional seeking to excel in
+            communication, or an avid learner passionate about language, our
+            platform empowers you to achieve linguistic mastery. Explore our
+            products and embark on a journey of linguistic enrichment today!
+          </Text>
+        </div>
+      </Container>
+      <Container></Container>
     </div>
   );
 };
