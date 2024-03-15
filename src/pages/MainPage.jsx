@@ -6,6 +6,7 @@ import {
   Spacer,
   Text,
   Row,
+  Col,
   Container,
 } from "@nextui-org/react";
 import { Illustration } from "../components/CommunicationSVG";
@@ -62,28 +63,63 @@ const App = () => {
             </Row>
           </Card.Body>
         </Card>
-        <Illustration />
-        <ThesaurusSVG />
+        <Row>
+          <Col>
+            <Illustration />
+          </Col>
+          <Col>
+            <ThesaurusSVG />
+          </Col>
+        </Row>
       </Container>
       <Container color="white" align="left">
         <div ref={expandVocab}>
-          <Text h2 color="white">
-            Expand Your Knowledge and Vocabulary!
-          </Text>
-          <br />
-          <Text align="center" color="gray" css={{ mw: "500px" }}>
-            Utilize this platform to streamline and enhance your lexicon! Here,
-            you can actively cultivate and broaden your vocabulary repertoire.
-            Through the array of tools and resources available, you can engage
-            in systematic vocabulary building and refinement. Whether you're a
-            student aiming to ace exams, a professional seeking to excel in
-            communication, or an avid learner passionate about language, our
-            platform empowers you to achieve linguistic mastery. Explore our
-            products and embark on a journey of linguistic enrichment today!
-          </Text>
+          <Row>
+            <Col>
+              <Text h2 color="white">
+                Expand Your Knowledge and Vocabulary!
+              </Text>
+              <br />
+              <Text
+                align="center"
+                justify="left"
+                color="gray"
+                css={{ mw: "500px" }}
+              >
+                Utilize this platform to streamline and enhance your lexicon!
+                Here, you can actively cultivate and broaden your vocabulary
+                repertoire. Through the array of tools and resources available,
+                you can engage in systematic vocabulary building and refinement.
+                Whether you're a student aiming to ace exams, a professional
+                seeking to excel in communication, or an avid learner passionate
+                about language, our platform empowers you to achieve linguistic
+                mastery. Explore our products and embark on a journey of
+                linguistic enrichment today!
+              </Text>
+            </Col>
+            <br />
+            <Col>
+              <Text h2 color="white">
+                Elevate Your Linguistic Proficiency!
+              </Text>
+              <br />
+              <Text align="center" color="gray" css={{ mw: "500px" }}>
+                Embark on a journey of linguistic empowerment with our
+                comprehensive platform! Unleash the full potential of your
+                vocabulary and elevate your communication skills to new heights.
+                Whether you're a language enthusiast, a student striving for
+                academic excellence, or a professional aiming to enhance your
+                verbal prowess, our resources and tools are tailored to meet
+                your needs. From curated word lists to interactive exercises,
+                immerse yourself in a rich linguistic landscape designed to
+                expand your knowledge and refine your language proficiency.
+                Don't just speak – articulate with precision and confidence.
+                Start your linguistic adventure today!
+              </Text>
+            </Col>
+          </Row>
         </div>
       </Container>
-      <Container></Container>
     </div>
   );
 };
