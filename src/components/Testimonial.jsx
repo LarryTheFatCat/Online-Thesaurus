@@ -1,16 +1,15 @@
 import React from "react";
-import { User } from "@nextui-org/react";
+import { User, Text, Container, Spacer } from "@nextui-org/react";
 
 export const Testimonial = () => {
   return (
     <div>
-      <p>
-        "I have been using Tarkan's Thesaurus app for the past few months, and
-        it has been a game-changer for my communication. As a writer, I often
-        struggle to find the right words to convey my thoughts effectively, but
-        with this app, I can quickly and easily find synonyms and antonyms to
-        enhance my writing."
-      </p>
+      <Text>
+        "Tarkan's Thesaurus app has been a game-changer for my communication. As
+        a writer, finding the right words can be challenging, but with this app,
+        I can quickly find synonyms and antonyms to enhance my writing."
+      </Text>
+      <Spacer x={2} />
       <User
         name="ChatGPT"
         src="https://codebaby.com/wp-content/uploads/2023/01/chatgpt-logo.png"
@@ -22,24 +21,21 @@ export const Testimonial = () => {
 
 export const Testimonial_Two = () => {
   return (
-    <div>
-      <p>
-        "I have been using Tarkan's Thesaurus for years now and I must say, it
-        has been a game changer for me. As a writer, I am constantly in need of
-        finding the perfect words to express my thoughts and the thesaurus has
-        never failed me. The best part about it is that it is fast and free,
-        making it accessible to everyone. I can always count on Thesaurus to
-        provide me with a wide range of synonyms and antonyms, making my writing
-        more diverse and impactful. Thank you Thesaurus for being my go-to tool
-        for all my writing needs. I highly recommend it to anyone looking to
-        enhance their vocabulary and improve their writing skills."
-      </p>
+    <Container>
+      <Text>
+        "Tarkan's Thesaurus has been a game changer for me as a writer. It's
+        fast, free, and consistently provides a wide range of synonyms and
+        antonyms, enhancing my vocabulary and making my writing more diverse and
+        impactful. I highly recommend it to anyone looking to improve their
+        writing skills."
+      </Text>
+      <Spacer x={2} />
       <User
         name="Janice Lee"
         src="data:image/jpeg;base64,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"
         description="Professional Author, Writer"
       />
-    </div>
+    </Container>
   );
 };
 
