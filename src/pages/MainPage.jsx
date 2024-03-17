@@ -8,7 +8,6 @@ import {
   Row,
   Col,
   Container,
-  Input,
 } from "@nextui-org/react";
 import { Illustration } from "../components/CommunicationSVG";
 import { ThesaurusSVG } from "../components/ThesaurusSVG";

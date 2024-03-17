@@ -26,7 +26,6 @@ export const WhatWeOfferComponent = () => {
                   Thesaurus App! Effortlessly find words that sound like your
                   desired term, helping you find the perfect synonym or
                   homophone effortlessly.
-                  <Text>hello</Text>
                 </Text>
               </Card.Body>
             </Card>
