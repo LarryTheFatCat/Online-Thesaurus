@@ -19,7 +19,8 @@ const App = () => {
   const expandVocab = useRef(null);
   return (
     <div className="container">
-      <ScrollToTop smooth viewBox="0 0 24 24" svgPath="M6 15L12 9L18 15" /> {/* This is sorcery right here */}
+      <ScrollToTop smooth viewBox="0 0 24 24" svgPath="M6 15L12 9L18 15" />{" "}
+      {/* This is sorcery right here */}
       <Text color="white" size={50} b>
         Welcome To Our Thesaurus App!
       </Text>
